@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+            <title>API solutions | IT Career Switch</title>
+        <meta name="author" content="Artur Knul">
+        <meta name="description" content="api in use">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="favicon.ico" rel="icon">
+        <link href="vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <div class="header">
+
+        </div>
+
+        <div class="main">
+
+        </div>
+
+        <div class="jumbotron text-center">
+            <h3>API solutions</h3> 
+        </div>
+            
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4">
+                <p>API name</p>
+              </div>
+              <div class="col-sm-4">
+                <p>API description</p>
+              </div>
+              <div class="col-sm-4">
+                <h2></h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4">
+                <p>1. Capital and language(s)</p>
+              </div>
+              <div class="col-sm-4">
+                <p>As a result of the request, you will receive the capital and the language(s) of the selected country</p>
+              </div>
+              <div class="col-sm-4">
+                <select id="selCountry">
+                    <option value="EG">Egypt</option>
+                    <option value="TH">Thailand</option>
+                </select>
+                <button id="btnRun">Run</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4">
+                <p>2. Timezone and time</p>
+              </div>
+              <div class="col-sm-4">
+                <p>As a result of the request, you will receive the timezone and the actual time of the selected country</p>
+              </div>
+              <div class="col-sm-4">
+                <select id="selLat">
+                    <option value="lat">Latitude 10.2</option>
+                </select>
+                <select id="selLng">
+                    <option value="lng">Longitude 47.01</option>
+                </select>
+                <button id="btnRun2">Run</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4">
+                <p>3. Additional Info</p>
+              </div>
+              <div class="col-sm-4">
+                <p>As a result of the request, you will receive additional informations about London</p>
+              </div>
+              <div class="col-sm-4">
+                <select id="selLat">
+                    <option value="q=london">London</option>
+                </select>
+                <select id="maxRows">
+                    <option value="lng">Rows</option>
+                </select>
+                <button id="btnRun3">Run</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="jumbotron text-center">
+            <h4>Results</h4>
+            <div id="divResults">
+			
+                <table>
+                    <tr>
+                        <td align="right">
+                            Capital: 
+                        </td>
+                        <td id="txtCapital">
+                            
+                        </td>
+    
+                    </tr>
+    
+                    <tr>
+                        <td align="right">
+                            Languages: 
+                        </td>
+                        <td id="txtLanguages">
+                            
+                        </td>
+    
+                    </tr>
+
+                    <tr>
+					    <td align="right">
+						    TimezoneId: 
+					    </td>
+					    <td id="txtTimezoneId">
+						
+					    </td>
+
+				    </tr>
+
+				    <tr>
+					    <td align="right">
+						    Time: 
+					    </td>
+					    <td id="txtTime">
+						
+					    </td>
+
+                    </tr>
+    
+                    <tr>
+                        <td align="right">
+                            Title: 
+                        </td>
+                        <td id="txtTitle">
+                            
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="right">
+                            Summary: 
+                        </td>
+                        <td id="txtSummary">
+                            
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="right">
+                            ThumbnailImg: 
+                        </td>
+                        <td id="txtThumbnailImg">
+                            
+                        </td>
+                    </tr>
+                </table>
+    
+            </div> 
+        </div>
+
+       <!--to add preloader here-->
+
+        <script src="vendors/jquery/jquery-2.2.3.min.js"></script>
+        <script src="vendors/bootstrap/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+    
+    </body>
+
+</html>
