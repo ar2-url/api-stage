@@ -18,164 +18,253 @@
     <body>
 
         <div class="header">
-
+          <p>PRACTICE</p>
         </div>
 
         <div class="main">
-
+          <p> solution</p>
         </div>
 
-        <div class="jumbotron text-center">
-            <h3>API solutions</h3> 
-        </div>
+        <table>
+          <tr>
+            <th colspan="2">API name</th>
+            <th>Select and confirm</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td class="td2" colspan="2">General info</td>
+            <td><select id="selCountry">
+              <option value="EG">Egypt</option>
+              <option value="TH">Thailand</option>
+              <option value="GB">Great Britain</option>
+              <option value="FR">France</option>
+              <option value="DE">Germany</option>
+              <option value="US">USA</option>
+            </select>
+        
+            <select id="selLanguage">
+              <option value="en">English</option>
+              <option value="fr">Francais</option>
+              <option value="de">Deutsche</option>
+            </select>
             
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-4">
-                <p>API name</p>
-              </div>
-              <div class="col-sm-4">
-                <p>API description</p>
-              </div>
-              <div class="col-sm-4">
-                <h2></h2>
-              </div>
-            </div>
-          </div>
+            <button id="btnRun">Run</button></td>
+            <td><p>Get general info about the country you have just landed</p></td>
+          </tr>
+          <tr>
+            <tr>
+              <td>1</td>
+              <td class="td1">
+                  Continent: 
+              </td>
+              <td id="txtContinentName">
+                  
+              </td>
 
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-4">
-                <p>1. Capital and language(s)</p>
-              </div>
-              <div class="col-sm-4">
-                <p>As a result of the request, you will receive the capital and the language(s) of the selected country</p>
-              </div>
-              <div class="col-sm-4">
-                <select id="selCountry">
-                    <option value="EG">Egypt</option>
-                    <option value="TH">Thailand</option>
-                </select>
-                <button id="btnRun">Run</button>
-              </div>
-            </div>
-          </div>
+          </tr>
 
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-4">
-                <p>2. Timezone and time</p>
-              </div>
-              <div class="col-sm-4">
-                <p>As a result of the request, you will receive the timezone and the actual time of the selected country</p>
-              </div>
-              <div class="col-sm-4">
-                <select id="selLat">
-                    <option value="lat">Latitude 10.2</option>
-                </select>
-                <select id="selLng">
-                    <option value="lng">Longitude 47.01</option>
-                </select>
-                <button id="btnRun2">Run</button>
-              </div>
-            </div>
-          </div>
+          <tr>
+            <td>2</td>
+              <td class="td1">
+                  Country: 
+              </td>
+              <td id="txtCountryName">
+                  
+              </td>
 
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-4">
-                <p>3. Additional Info</p>
-              </div>
-              <div class="col-sm-4">
-                <p>As a result of the request, you will receive additional informations about London</p>
-              </div>
-              <div class="col-sm-4">
-                <select id="selLat">
-                    <option value="q=london">London</option>
-                </select>
-                <select id="maxRows">
-                    <option value="lng">Rows</option>
-                </select>
-                <button id="btnRun3">Run</button>
-              </div>
-            </div>
-          </div>
+          </tr>
 
-          <div class="jumbotron text-center">
-            <h4>Results</h4>
-            <div id="divResults">
-			
-                <table>
-                    <tr>
-                        <td align="right">
-                            Capital: 
-                        </td>
-                        <td id="txtCapital">
-                            
-                        </td>
-    
-                    </tr>
-    
-                    <tr>
-                        <td align="right">
-                            Languages: 
-                        </td>
-                        <td id="txtLanguages">
-                            
-                        </td>
-    
-                    </tr>
+            <tr>
+              <td>3</td>
+              <td class="td1">
+                Capital: 
+              </td>
+              <td id="txtCapital">
+  
+              </td>
 
-                    <tr>
-					    <td align="right">
-						    TimezoneId: 
-					    </td>
-					    <td id="txtTimezoneId">
-						
-					    </td>
+            </tr>
 
-				    </tr>
+            <tr>
+              <td>4</td>
+              <td class="td1">
+                Language: 
+              </td>
+              <td id="txtLanguages">
+  
+              </td>
 
-				    <tr>
-					    <td align="right">
-						    Time: 
-					    </td>
-					    <td id="txtTime">
-						
-					    </td>
+            </tr>
 
-                    </tr>
-    
-                    <tr>
-                        <td align="right">
-                            Title: 
-                        </td>
-                        <td id="txtTitle">
-                            
-                        </td>
-                    </tr>
+            <tr>
+              <td>5</td>
+              <td class="td1">
+                  Area in km<sup>2</sup>: 
+              </td>
+              <td id="txtAreaInSqKm">
+                  
+              </td>
+            </tr>
 
-                    <tr>
-                        <td align="right">
-                            Summary: 
-                        </td>
-                        <td id="txtSummary">
-                            
-                        </td>
-                    </tr>
+            <tr>
+              <td>6</td>
+              <td class="td1">
+                  Population: 
+              </td>
+              <td id="txtPopulation">
+                  
+              </td>
+            </tr>
 
-                    <tr>
-                        <td align="right">
-                            ThumbnailImg: 
-                        </td>
-                        <td id="txtThumbnailImg">
-                            
-                        </td>
-                    </tr>
-                </table>
-    
-            </div> 
-        </div>
+            <tr>
+              <td>7</td>
+              <td class="td1">
+                  Currency code: 
+              </td>
+              <td id="txtCurrencyCode">
+                  
+              </td>
+            </tr>
+          </tr>
+          <tr>
+            <td class="td2" colspan="2">Your place</td>
+            <td><select id="selRows">
+                    
+              <option value="10">10</option>
+              <option value="11">11</option>
+
+            </select>
+            <select id="selQuery">
+              
+              <option value="adelaide">Adelaide</option>
+              <option value="montevideo">Montevideo</option>
+              <option value="whitehorse">Whitehorse</option>
+              <option value="yokohama">Yokohama</option>
+               
+            </select>
+            <button id="btnRun2">Run</button></td>
+            <td>Get some informations about the place you've landed</td>
+          </tr>
+          <tr>
+
+          <tr>
+            <td>1</td>
+              <td class="td1">
+                  Feature: 
+              </td>
+              <td id="txtFeature">
+                  
+              </td>
+
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td class="td1">
+              Longitude: 
+            </td>
+            <td id="txtLng">
+  
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td class="td1">
+              Latitude: 
+            </td>
+            <td id="txtLat">
+  
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>4</td>
+              <td class="td1">
+                  Country code: 
+              </td>
+              <td id="txtCountryCode">
+                  
+              </td>
+          </tr>
+
+          <tr>
+            <td>5</td>
+            <td class="td1">
+                Thumbnail url: 
+            </td>
+            <td id="txtThumbnailImg">
+                
+            </td>
+          </tr>
+        </tr>
+
+          <tr>
+            <td class="td2" colspan="2">Find nearby (choose coords)</td>
+            <td><select id="selNearbyLng">
+               
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+
+            </select>
+            <select id="selNearbyLat">
+              <option value="46">46</option>
+              <option value="47">47</option>
+              <option value="48">48</option>
+              <option value="49">49</option>
+                
+            </select>
+            <button id="btnRun3">Run</button></td>
+            <td>Get some informations about the nearest points</td>
+          </tr>
+          <tr>
+            <tr>
+              <td>1</td>
+              <td class="td1">
+                  Title: 
+              </td>
+              <td id="txtTitle">
+                  
+              </td>
+
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td class="td1">
+              Summary: 
+            </td>
+            <td id="txtSummary">
+  
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>3</td>
+              <td class="td1">
+                  Distance: 
+              </td>
+              <td id="txtDistance">
+                  
+              </td>
+          </tr>
+
+            <tr>
+              <td>4</td>
+              <td class="td1">
+                Wikipedia url: 
+              </td>
+              <td id="txtWikipediaUrl">
+                
+              </td>
+            </tr>
+          </tr>
+        </table>
 
        <!--to add preloader here-->
 
