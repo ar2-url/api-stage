@@ -2,7 +2,7 @@
 
 	$executionStartTime = microtime(true) / 1000;
 
-	$url='http://api.geonames.org/timezoneJSON?formatted=true&lat=&lng=' . $_REQUEST['lat'] . '&lng=' . $_REQUEST['lng'] . '&username=arurknul';
+	$url='http://api.geonames.org/findNearbyWikipediaJSON?formatted=true&lat=' . $_REQUEST['lat'] . '&lng=' . $_REQUEST['lng'] . '&username=arurknul';
 
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
