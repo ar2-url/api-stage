@@ -14,8 +14,13 @@
 
 				if (result.status.name == "ok") {
 
+					$('#txtContinentName').html(result['data'][0]['continentName']);
+					$('#txtCountryName').html(result['data'][0]['countryName']);
 					$('#txtCapital').html(result['data'][0]['capital']);
 					$('#txtLanguages').html(result['data'][0]['languages']);
+					$('#txtAreaInSqKm').html(result['data'][0]['areaInSqKm']);
+					$('#txtPopulation').html(result['data'][0]['population']);
+					$('#txtCurrencyCode').html(result['data'][0]['currencyCode']);
 
 				}
 			
@@ -31,12 +36,12 @@
 	$('#btnRun2').click(function() {
 
 		$.ajax({
-			url: "php/getTimezoneInfo.php",
+			url: "php/getWikiInfo.php",
 			type: 'POST',
 			dataType: 'json',
 			data: {
-				lat: $('#selLat').val(),
-				lng: $('#selLng').val()
+				maxRows: $('#selRows').val(),
+				q: $('#selQuery').val()
 			},
 			success: function(result) {
 
@@ -44,8 +49,11 @@
 
 				if (result.status.name == "ok") {
 
-					$('#txtTimezoneId').html(result['data'][0]['timezoneId']);
-					$('#txtTime').html(result['data'][0]['time']);
+					$('#txtFeature').html(result['data'][0]['feature']);
+					$('#txtLng').html(result['data'][0]['lng']);
+					$('#txtLat').html(result['data'][0]['lat']);
+					$('#txtCountryCode').html(result['data'][0]['countryCode']);
+					$('#txtThumbnailImg').html(result['data'][0]['thumbnailImg']);
 
 				}
 			
@@ -61,12 +69,12 @@
 	$('#btnRun3').click(function() {
 
 		$.ajax({
-			url: "php/getWikiInfo.php",
+			url: "php/getNearbyInfo.php",
 			type: 'POST',
 			dataType: 'json',
 			data: {
-				q=london: $('#selQ=london').val(),
-				maxRows: $('#selMaxRows').val()
+				lng: $('#selNearbyLng').val(),
+				lat: $('#selNearbyLat').val()
 			},
 			success: function(result) {
 
@@ -76,7 +84,8 @@
 
 					$('#txtTitle').html(result['data'][0]['title']);
 					$('#txtSummary').html(result['data'][0]['summary']);
-					$('#urlThumbnailImg').html(result['data'][0]['thumbnailImg']);
+					$('#txtDistance').html(result['data'][0]['distance']);
+					$('#txtWikipediaUrl').html(result['data'][0]['wikipediaUrl']);
 
 				}
 			
